@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-light">
+  <ul class="navbar-container">
+    <span>
+      <li>
+        <%= link_to 'Mister Cocktail', cocktails_path, id:"logo-main" %>
+      </li>
+    </span>
+    <span class="nav-right">
+      <li>
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      </li>
+      <li>
+        <button class="btn btn-sm" id="btn-search-navbar" type="submit"><i class="fas fa-search"></i></button>
+      </li>
+      <li>
+        <%= link_to "Add a cocktail", new_cocktail_path, class:"btn-add-cocktail" %>
+      </li>
+    </span>
+  </ul>
+</nav>

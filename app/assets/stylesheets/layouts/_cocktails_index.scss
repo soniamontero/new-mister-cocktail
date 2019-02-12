@@ -1,0 +1,25 @@
+.cocktails-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1vw;
+  padding-right: 4vw;
+  padding-left: 4vw;
+  justify-content: center;
+}
+
+.cocktail-photo {
+  height: 200px;
+}
+
+.cocktail-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 20px;
+  align-items: center;
+  a {
+    text-decoration: none;
+    color: #f2c3c4;
+    text-transform: uppercase;
+  }
+}

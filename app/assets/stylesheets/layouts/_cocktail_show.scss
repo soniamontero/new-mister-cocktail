@@ -1,0 +1,21 @@
+.cocktail-name {
+  color: #f2c3c4;
+  text-transform: uppercase;
+}
+
+.cocktail-container {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+
+  height: 300px;
+  overflow: hidden;
+}
+
+.cocktail-photo {
+  margin-left: -40px;
+}
+
+.cocktail-details {
+  margin-left: 30px;
+}

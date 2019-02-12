@@ -1,0 +1,35 @@
+.navbar {
+  margin-bottom: 0px;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 20px;
+  list-style: none;
+  border-bottom: 1px solid #f2c5c638;
+  margin-bottom: 0px;
+
+  #logo-main {
+    font-family: "Rock Salt";
+    font-size: 30px;
+    text-decoration: none;
+    color: pink;
+  }
+
+  .btn-add-cocktail {
+    color: #a9a9a9;
+    margin-left: 25px;
+
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#btn-search-navbar {
+  margin-top: -1px;
+}
