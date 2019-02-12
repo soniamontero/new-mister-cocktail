@@ -1,3 +1,10 @@
+.cocktails-background {
+  background-image: asset-url("bg-cocktail-index3.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 85px);
+}
+
 .cocktails-container {
   display: flex;
   flex-wrap: wrap;
@@ -7,9 +14,14 @@
   justify-content: center;
 }
 
-.cocktail-photo {
+.cocktail-index-photo {
   height: 200px;
 }
+// .cocktail-index-photo {
+//   img {
+//     max-height: 300px;
+//   }
+// }
 
 .cocktail-card {
   display: flex;
@@ -21,5 +33,15 @@
     text-decoration: none;
     color: #f2c3c4;
     text-transform: uppercase;
+    img {
+      margin: auto;
+      -webkit-filter: drop-shadow(2px 2px 12px #ffffff);
+      filter: drop-shadow(2px 2px 12px #ffffff);
+    }
+  }
+  h5 {
+    color: white;
+    text-shadow: 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white, 0 0 4px white;
+    padding: 5px;
   }
 }

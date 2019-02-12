@@ -1,5 +1,5 @@
-<!-- <div class="form-container"> -->
-  <div class="form-container col-xs-6 col-sm-6 col-md-4 ">
+<div class="form-background">
+  <div class="form-container cocktail-form col-xs-6 col-sm-6 col-md-4 ">
     <%= simple_form_for(@cocktail) do |f| %>
       <% if @cocktail.errors.any? %>
         <div class="errors-container">
@@ -10,11 +10,11 @@
           </ul>
         </div>
       <% end %>
-      <%= f.input :name, label: "What's the name of your new cocktail?", error: 'A cocktail name is mandatory!' %>
+      <%= f.input :name, label: "Name of your cocktail?", error: 'A cocktail name is mandatory!' %>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
 
       <%= f.button :submit, "Create Your Cocktail", id: "submit-btn" %>
     <% end %>
   </div>
-<!-- </div> -->
+</div>

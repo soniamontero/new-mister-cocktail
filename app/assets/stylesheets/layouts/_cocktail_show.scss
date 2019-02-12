@@ -1,3 +1,10 @@
+.cocktail-background {
+  background-image: asset-url("bg-cocktail-show.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 85px);
+}
+
 .cocktail-name {
   color: #f2c3c4;
   text-transform: uppercase;
@@ -7,15 +14,41 @@
   display: flex;
   width: 100vw;
   justify-content: center;
-
-  height: 300px;
+  flex-wrap: wrap;
+  min-height: 340px;
   overflow: hidden;
+  padding: 20px;
+  padding-top: 40px;
+  align-items: center;
 }
 
 .cocktail-photo {
-  margin-left: -40px;
+    margin-left: -62px;
+    padding-right: 63px;
+  img {
+    max-height: 340px;
+    max-width: 200px;
+  }
 }
 
 .cocktail-details {
   margin-left: 30px;
+}
+
+.dose-form {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 556px) {
+  .cocktail-photo {
+    margin-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 15px;
+  }
+  .cocktail-details {
+    margin-left: 0px;
+  }
 }

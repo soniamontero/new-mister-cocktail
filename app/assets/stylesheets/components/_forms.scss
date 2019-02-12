@@ -1,6 +1,5 @@
 .form-container {
   display: flex;
-  width: 100vw;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -8,10 +7,32 @@
   .simple_form.new_cocktail {
     display: flex;
     flex-direction: column;
-    font-family: 'Open Sans'
+    label {
+      color: #ffffff;
+      text-shadow: 1px 1px 3px white;
+      font-size: 24px;
+      font-weight: 500;
+      font: 900 42px cookie, cursive;
+    }
+  .form-control-file {}
   }
 
   #submit-btn {
-    color: #a9a9a9;
+    color: #ed9ca0;
+    background-color: #ffffffbf;
+    font-weight: 900;
   }
 }
+
+.form-container.cocktail-form {
+  height: calc(100vh - 85px);
+  width: 100vw;
+}
+
+.form-background {
+  background-image: asset-url("bg-cocktail-new4.jpg");
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 85px);
+}
+

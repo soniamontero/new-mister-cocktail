@@ -1,37 +1,42 @@
-<div class="cocktail-container">
-  <div class="cocktail-photo">
-    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+<div class="cocktail-background">
+  <div class="cocktail-container">
+
+    <div class="cocktail-photo">
+      <%= cl_image_tag @cocktail.photo %>
+    </div>
+    <div class="cocktail-details">
+      <h2 class="cocktail-name">
+        <%= @cocktail.name %>
+      </h2>
+      <h4>Ingredients:</h4>
+      <% if @cocktail.doses.empty? %>
+        <p>No doses added yet.</p>
+      <% else %>
+        <% @cocktail.doses.each do |dose| %>
+          <p>
+            <%= dose.description %> of <%= dose.ingredient.name %>
+            <%= link_to doses_path(dose), method: :delete do %>
+              <i class="fas fa-times" style="color: #f1d9d9;"></i>
+            <% end %>
+          </p>
+        <% end %>
+      <% end %>
+    <div class="form-container dose-form col-xs-6 col-sm-6 col-md-4 ">
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <% if @cocktail.errors.any? %>
+          <div class="errors-container">
+            <ul>
+              <% @cocktail.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <%= f.association :ingredient, label: "What's your poison?" %>
+        <%= f.input :description, label: "What quantity?", error: 'A description is mandatory!' %>
+        <%= f.button :submit, "Add the dose", id: "submit-btn" %>
+      <% end %>
+    </div>
   </div>
-
-  <div class="cocktail-details">
-    <h2 class="cocktail-name">
-      <%= @cocktail.name %>
-    </h2>
-    <% @cocktail.doses.each do |dose| %>
-      <p><%= dose.description %> of <%= dose.ingredient.name %></p>
-      <br>
-      <%= link_to "DEL", doses_path(dose), method: :delete %>
-    <% end %>
   </div>
-</div>
-
-<div>
-  <%= link_to "Back", cocktails_path, class:"btn btn-success btn-sm" %>
-</div>
-
-<div class="form-container col-xs-6 col-sm-6 col-md-4 ">
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <% if @cocktail.errors.any? %>
-      <div class="errors-container">
-        <ul>
-          <% @cocktail.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-    <%= f.association :ingredient, label: "What's your poison?" %>
-    <%= f.input :description, label: "How much do you want?", error: 'A description is mandatory!' %>
-    <%= f.button :submit, "Add the dose", id: "submit-btn" %>
-  <% end %>
 </div>
