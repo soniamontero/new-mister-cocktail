@@ -18,11 +18,22 @@ Ingredient.destroy_all
 
 p "Seeding ingredients..."
 
+Ingredient.create(name: "gin")
+Ingredient.create(name: "rhum")
 Ingredient.create(name: "lemon")
+Ingredient.create(name: "sugar")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
-Ingredient.create(name: "baileys")
-Ingredient.create(name: "rhum")
-Ingredient.create(name: "sugar")
+Ingredient.create(name: "vodka")
+Ingredient.create(name: "tonic")
+Ingredient.create(name: "blood")
+Ingredient.create(name: "butter infused with venom")
+Ingredient.create(name: "tears of a virgin")
+Ingredient.create(name: "bug powder")
+Ingredient.create(name: "beaver hair")
+Ingredient.create(name: "boiled bones")
+Ingredient.create(name: "arsenic")
+Ingredient.create(name: "sand")
+Ingredient.create(name: "antifreeze")
 
 p "Done!"
